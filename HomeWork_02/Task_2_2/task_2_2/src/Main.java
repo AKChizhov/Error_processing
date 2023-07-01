@@ -1,7 +1,8 @@
+//Реализуйте метод, получающий от пользователя дробное числа (типа float)(см README.md)
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.EmptyStackException;
 
 public class Main {
     public static void main(String[] args){
@@ -9,9 +10,6 @@ public class Main {
     }
 
     public static void getFloat(){
-        //Реализуйте метод, который запрашивает у пользователя ввод дробного числа (типа float),
-        // и возвращает введенное значение. Ввод текста вместо числа не должно приводить к падению приложения,
-        // вместо этого, необходимо повторно запросить у пользователя ввод данных.
 
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
@@ -23,7 +21,6 @@ public class Main {
         }
 
     }
-
     public static float getFloatFromUser(BufferedReader bufferedReader){
         final String RD  = "\u001B[31m"; //ANSI_RED
         final String RT = "\u001B[0m";//ANSI_RESET
@@ -38,7 +35,6 @@ public class Main {
             System.out.println(RD+"\tВведено  < "+BE+ temp  +RD+"  > поэтому  произошла ошибка при преобразовании введенного значения в число типа float "+RT);
             return getFloatFromUser(bufferedReader);
         }
-
         return result;
     }
 
